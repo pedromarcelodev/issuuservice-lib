@@ -40,6 +40,83 @@ class IssuuDocument extends IssuuServiceAPI
     protected $slug_section = 'document';
 
     /**
+    *   IssuuDocument::upload()
+    *
+    *   Relacionado ao método issuu.document.upload da API.
+    *   Carrega um arquivo para a conta.
+    *
+    *   @access public
+    *   @param array $params Correspondente aos parâmetros da requisição
+    *   @return array Retorna um array com a resposta da requisição
+    */
+    public function upload($params = array())
+    {
+        if (!isset($_FILES['file']) || empty($_FILES['files']))
+        {
+            header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error');
+            header('Content-Type: text/plain');
+            die('This form is not multipart/form-data');
+        }
+
+        $params['action'] = 'issuu.document.upload';
+
+        foreach ($params as $key => $value) {
+            if (isset($value) && ($value == '' || is_null($value)))
+            {
+                unset($params[$key]);
+            }
+        }
+
+        $this->setParams($params);
+        $file = $_FILES['file']['tmp_name'];
+
+        $this->params['file'] = '@' . $file;
+
+        $curl = curl_init('http://upload.issuu.com/1_0');
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $this->params);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+
+        $slug = $this->slug_section;
+
+        if (isset($params['format']) && $params['format'] == 'json')
+        {
+            $response = json_decode($response);
+            $response = $response->rsp;
+
+            if($response->stat == 'ok')
+            {
+                $result['stat'] = 'ok';
+                $result[$slug] = $this->clearObjectJson($response->_content->$slug);
+
+                return $result;
+            }
+            else
+            {
+                return $this->returnErrorJson($response);
+            }
+        }
+        else
+        {
+            $response = new SimpleXMLElement($response);
+
+            if ($response['stat'] == 'ok')
+            {
+                $result['stat'] = 'ok';
+                $result[$slug] = $this->clearObjectXML($response->$slug);
+
+                return $result;
+            }
+            else
+            {
+                return $this->returnErrorXML($response);
+            }
+        }
+    }
+
+    /**
     *   IssuuDocument::urlUpload()
     *
     *   Relacionado ao método issuu.document.url_upload da API.
