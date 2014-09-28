@@ -186,6 +186,7 @@ abstract class IssuuServiceAPI
             $this->params = $params;
             $this->params['apiKey'] = $this->api_key;
             $this->signature = $this->calculateSignature();
+            $this->params['signature'] = $this->signature;
             $this->params_str = $this->params_str . '&signature=' . $this->signature;
         }
         else
