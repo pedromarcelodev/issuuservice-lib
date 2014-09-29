@@ -12,10 +12,10 @@ de parâmetros de todos os métodos (exceto no caso em que a <em>apiKey</em> que
 A inserção desses parâmetros é feita internamente.
 
 <h1>Seções</h1>
-<a href="#document">Document</a>
-<a href="#bookmark">Bookmark</a>
-<a href="#folder">Folder</a>
-<a href="#document-embed">Document Embed</a>
+<a href="#document">Document</a><br>
+<a href="#bookmark">Bookmark</a><br>
+<a href="#folder">Folder</a><br>
+<a href="#document-embed">Document Embed</a><br>
 
 <hr>
 <h2>Document</h2>
