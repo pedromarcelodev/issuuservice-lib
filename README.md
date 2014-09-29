@@ -12,7 +12,7 @@ de parâmetros de todos os métodos (exceto no caso em que a <em>apiKey</em> que
 A inserção desses parâmetros é feita internamente.
 
 <h1>Seções</h1>
-<h5>Document</h5>
+<a href="#document">Document</a>
 <h5>Bookmark</h5>
 <h5>Folder</h5>
 <h5>Document Embed</h5>
