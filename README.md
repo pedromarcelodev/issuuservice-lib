@@ -13,9 +13,9 @@ A inserção desses parâmetros é feita internamente.
 
 <h1>Seções</h1>
 <a href="#document">Document</a>
-<h5>Bookmark</h5>
-<h5>Folder</h5>
-<h5>Document Embed</h5>
+<a href="#bookmark">Bookmark</a>
+<a href="#folder">Folder</a>
+<a href="#document-embed">Document Embed</a>
 
 <hr>
 <h2>Document</h2>
