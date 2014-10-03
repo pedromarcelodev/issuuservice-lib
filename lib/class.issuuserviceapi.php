@@ -5,7 +5,7 @@
 *
 *   @author Pedro Marcelo de Sá Alves
 *   @link https://github.com/pedromarcelojava/
-*   @version 1.0
+*   @version 1.0.3
 */
 abstract class IssuuServiceAPI
 {
@@ -236,7 +236,7 @@ abstract class IssuuServiceAPI
         {
             if ($type == 0)
             {
-                return utf8_decode($object->$field);
+                return (string) $object->$field;
             }
             else if ($type == 1)
             {
@@ -274,7 +274,7 @@ abstract class IssuuServiceAPI
         {
             if ($type == 0)
             {
-                return utf8_decode($object[$field]);
+                return (string) $object[$field];
             }
             else if ($type == 1)
             {
@@ -345,7 +345,12 @@ abstract class IssuuServiceAPI
     final protected function returnSingleResult($params)
     {
         $this->setParams($params);
-        $response = file_get_contents($this->buildUrl());
+
+        $curl = curl_init($this->buildUrl());
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($curl);
+        curl_close($curl);
+
         $slug = $this->slug_section;
 
         if (isset($params['format']) && $params['format'] == 'json')
@@ -396,7 +401,10 @@ abstract class IssuuServiceAPI
         $params['action'] = $this->delete;
         $this->setParams($params);
 
-        $response = file_get_contents($this->buildUrl());
+        $curl = curl_init($this->buildUrl());
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($curl);
+        curl_close($curl);
 
         if (isset($params['format']) && $params['format'] == 'json')
         {
@@ -440,7 +448,11 @@ abstract class IssuuServiceAPI
         $params['action'] = $this->list;
         $this->setParams($params);
 
-        $response = file_get_contents($this->buildUrl());
+        $curl = curl_init($this->buildUrl());
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($curl);
+        curl_close($curl);
+
         $slug = $this->slug_section;
 
         if (isset($params['format']) && $params['format'] == 'json')
