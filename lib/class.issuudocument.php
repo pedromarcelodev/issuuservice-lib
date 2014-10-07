@@ -51,7 +51,7 @@ class IssuuDocument extends IssuuServiceAPI
     */
     public function upload($params = array())
     {
-        if (!isset($_FILES['file']) || empty($_FILES['files']))
+        if (!isset($_FILES['file']) || empty($_FILES['file']))
         {
             header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error');
             header('Content-Type: text/plain');
