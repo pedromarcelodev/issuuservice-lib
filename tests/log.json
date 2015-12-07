@@ -1,0 +1,100 @@
+{
+    "event": "suiteStart",
+    "suite": "issuu-service-api",
+    "tests": 7
+}{
+    "event": "suiteStart",
+    "suite": "IssuuDocumentTest",
+    "tests": 7
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testHasClass"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testHasClass",
+    "status": "pass",
+    "time": 0.00062894821166992,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testSetParamsAndThrowException"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testSetParamsAndThrowException",
+    "status": "pass",
+    "time": 0.00043106079101562,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testCalculateSignature"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testCalculateSignature",
+    "status": "pass",
+    "time": 0.00039196014404297,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testParseJsonObjectValues"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testParseJsonObjectValues",
+    "status": "pass",
+    "time": 0.00043702125549316,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testParseXmlObjectValues"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testParseXmlObjectValues",
+    "status": "pass",
+    "time": 0.00063014030456543,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testIssuuListDocuments"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testIssuuListDocuments",
+    "status": "pass",
+    "time": 0.27845096588135,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testUrlUploadUpdateAndDeleteDocument"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testUrlUploadUpdateAndDeleteDocument",
+    "status": "pass",
+    "time": 21.763113975525,
+    "trace": [],
+    "message": "",
+    "output": ""
+}
