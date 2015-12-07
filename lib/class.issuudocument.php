@@ -69,15 +69,20 @@ class IssuuDocument extends IssuuServiceAPI
 
         $this->setParams($params);
         $file = $_FILES['file']['tmp_name'];
-
         $this->params['file'] = '@' . $file;
+        $response = $this->curlcurlRequest(
+            $this->getUploadUrl(),
+            $this->params,
+            array(),
+            false
+        );
 
-        $curl = curl_init('http://upload.issuu.com/1_0');
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $this->params);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        // $curl = curl_init('http://upload.issuu.com/1_0');
+        // curl_setopt($curl, CURLOPT_POSTFIELDS, $this->params);
+        // curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
-        $response = curl_exec($curl);
-        curl_close($curl);
+        // $response = curl_exec($curl);
+        // curl_close($curl);
 
         $slug = $this->slug_section;
 
