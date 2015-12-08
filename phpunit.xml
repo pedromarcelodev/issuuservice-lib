@@ -1,7 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="bootstrap.php" colors="true">
 	<testsuites>
 		<testsuite name="issuu-service-api">
-			<file>tests/class.issuudocumenttest.php</file>
+			<file>tests/lib/class.issuudocumenttest.php</file>
+			<file>tests/lib/class.issuubookmarktest.php</file>
 		</testsuite>
 	</testsuites>
 	<logging>
@@ -13,5 +15,6 @@
 	</logging>
 	<php>
 		<post name="doc-test" value="http://www.mreis.info/FIJ/NEANDERWIN.pdf"/>
+		<post name="existing-document" value="curriculo-pedro-marcelo-v2"/>
 	</php>
 </phpunit>
