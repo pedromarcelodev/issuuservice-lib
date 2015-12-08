@@ -1,41 +1,35 @@
 <?php
 
-class IssuuDocumentTest extends PHPUnit_Framework_TestCase
+class IssuuBookmarkTest extends PHPUnit_Framework_TestCase
 {
 	private static $instance;
 
 	private static $params = array(
-		'action' => 'issuu.document.upload',
-		'description' => 'Issuu Service Library Test',
-		'title' => 'Pedro Marcelo de Sá Alves',
+		'action' => 'issuu.bookmark.add',
+		'documentUsername' => 'pedromarcelodesaalves',
+		'name' => 'curriculo-pedro-marcelo-v2',
 	);
 
 	private static $signature;
 
 	public static function setUpBeforeClass()
 	{
-		self::$instance = new IssuuDocument('jil7ll5cg2cwm93kg6xlsc1x9apdeyh7', '8agoiu10igdyw7azj9b8rvi0otyja6gj');
-		$params = array_merge(
-			array('apiKey' => 'jil7ll5cg2cwm93kg6xlsc1x9apdeyh7'),
-			self::$params
-		);
+		self::$instance = new IssuuBookmark('jil7ll5cg2cwm93kg6xlsc1x9apdeyh7', '8agoiu10igdyw7azj9b8rvi0otyja6gj');
+		$params = array_merge(array('apiKey' => 'jil7ll5cg2cwm93kg6xlsc1x9apdeyh7'), self::$params);
 		ksort($params);
-		$params = strtr(
-			urldecode(http_build_query($params)),
-			array('&' => '', '=' => '')
-		);
+		$params = strtr(urldecode(http_build_query($params)), array('&' => '', '=' => ''));
 		self::$signature = md5('8agoiu10igdyw7azj9b8rvi0otyja6gj' . $params);
 	}
 
 	public function testHasClass()
 	{
-		$this->assertTrue(class_exists('IssuuDocument'));
+		$this->assertTrue(class_exists('IssuuBookmark'));
 	}
 
 	public function testSetParamsAndThrowException()
 	{
 		try {
-			self::$instance->setParams(array('action' => 'issuu.documents.list'));
+			self::$instance->setParams(array('action' => 'issuu.bookmarks.list'));
 			$this->assertTrue(true);
 		} catch (Exception $e) {
 			$this->fail("Parâmetros não aceitos");
@@ -119,42 +113,48 @@ class IssuuDocumentTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals('', self::$instance->validFieldXML($obj, 'attr6'));
 	}
 
-	public function testIssuuListDocuments()
+	public function testIssuuListBookmarks()
 	{
 		$response = self::$instance->issuuList();
 		$this->assertEquals('ok', $response['stat']);
 	}
 
-	public function testUrlUploadUpdateAndDeleteDocument()
+	public function testErrorCodes()
 	{
-		// Sem o parâmetro obrigatório slurpUrl
-		$params = self::$params;
-		$response = self::$instance->urlUpload($params);
+		$invalidInstance = new IssuuBookmark('jil7ll5cg2cwm93kg6xlsc1x9apdeyhb', 'apisecret');
+		$response = $invalidInstance->issuuList();
 		$this->assertTrue(
-			$response['stat'] == 'fail' && $response['code'] == '200' && $response['field'] == 'slurpUrl'
+			$response['stat'] == 'fail' && $response['code'] == '010'
 		);
 
-		// Campo name com formato inválido
-		$params['slurpUrl'] = $_POST['doc-test'];
+		$params = array(
+			'action' => self::$params['action'],
+			'documentUsername' => self::$params['documentUsername'],
+		);
+		$response = self::$instance->add($params);
+		$this->assertTrue(
+			$response['stat'] == 'fail' && $response['code'] == '200' && $response['field'] == 'name'
+		);
+
 		$params['name'] = 'test-name invalid';
-		$response = self::$instance->urlUpload($params);
+		$response = self::$instance->add($params);
 		$this->assertTrue(
 			$response['stat'] == 'fail' && $response['code'] == '201' && $response['field'] == 'name'
 		);
 
-		// Campo name com formato válido
-		$params['name'] = 'test-name-valid';
-		$response = self::$instance->urlUpload($params);
+		$params['name'] = 'nonexistent-document';
+		$response = self::$instance->add($params);
+		$this->assertTrue(
+			$response['stat'] == 'fail' && $response['code'] == '300'
+		);
+	}
+
+	public function testAddAndDeleteBookmark()
+	{
+		$response = self::$instance->add(self::$params);
 		$this->assertTrue($response['stat'] == 'ok');
-
-		$params['title'] .= ' 2';
-		$response = self::$instance->update($params);
-		$this->assertTrue($response['stat'] == 'ok');
-
-		sleep(20);
-
-		$params2 = array('names' => $params['name']);
-		$response = self::$instance->delete($params2);
+		$response = self::$instance->delete(array('bookmarkIds' => $response['bookmark']->bookmarkId));
 		$this->assertTrue($response['stat'] == 'ok');
 	}
+
 }
