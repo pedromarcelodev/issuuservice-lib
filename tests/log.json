@@ -1,11 +1,11 @@
 {
     "event": "suiteStart",
     "suite": "issuu-service-api",
-    "tests": 7
+    "tests": 16
 }{
     "event": "suiteStart",
     "suite": "IssuuDocumentTest",
-    "tests": 7
+    "tests": 8
 }{
     "event": "testStart",
     "suite": "IssuuDocumentTest",
@@ -15,7 +15,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testHasClass",
     "status": "pass",
-    "time": 0.00062894821166992,
+    "time": 0.00055408477783203,
     "trace": [],
     "message": "",
     "output": ""
@@ -28,7 +28,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testSetParamsAndThrowException",
     "status": "pass",
-    "time": 0.00043106079101562,
+    "time": 0.00041484832763672,
     "trace": [],
     "message": "",
     "output": ""
@@ -41,7 +41,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testCalculateSignature",
     "status": "pass",
-    "time": 0.00039196014404297,
+    "time": 0.00036907196044922,
     "trace": [],
     "message": "",
     "output": ""
@@ -54,7 +54,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testParseJsonObjectValues",
     "status": "pass",
-    "time": 0.00043702125549316,
+    "time": 0.00037097930908203,
     "trace": [],
     "message": "",
     "output": ""
@@ -67,7 +67,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testParseXmlObjectValues",
     "status": "pass",
-    "time": 0.00063014030456543,
+    "time": 0.0004119873046875,
     "trace": [],
     "message": "",
     "output": ""
@@ -80,7 +80,20 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testIssuuListDocuments",
     "status": "pass",
-    "time": 0.27845096588135,
+    "time": 0.26087307929993,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testErrorCodes"
+}{
+    "event": "test",
+    "suite": "IssuuDocumentTest",
+    "test": "IssuuDocumentTest::testErrorCodes",
+    "status": "pass",
+    "time": 0.69589710235596,
     "trace": [],
     "message": "",
     "output": ""
@@ -93,8 +106,124 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testUrlUploadUpdateAndDeleteDocument",
     "status": "pass",
-    "time": 21.763113975525,
+    "time": 21.367321014404,
     "trace": [],
     "message": "",
+    "output": ""
+}{
+    "event": "suiteStart",
+    "suite": "IssuuBookmarkTest",
+    "tests": 8
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testHasClass"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testHasClass",
+    "status": "pass",
+    "time": 0.00082206726074219,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testSetParamsAndThrowException"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testSetParamsAndThrowException",
+    "status": "pass",
+    "time": 0.00085592269897461,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testCalculateSignature"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testCalculateSignature",
+    "status": "pass",
+    "time": 0.00092887878417969,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testParseJsonObjectValues"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testParseJsonObjectValues",
+    "status": "pass",
+    "time": 0.00095486640930176,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testParseXmlObjectValues"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testParseXmlObjectValues",
+    "status": "pass",
+    "time": 0.00081801414489746,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testIssuuListBookmarks"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testIssuuListBookmarks",
+    "status": "pass",
+    "time": 0.23516201972961,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testErrorCodes"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testErrorCodes",
+    "status": "pass",
+    "time": 0.95175504684448,
+    "trace": [],
+    "message": "",
+    "output": ""
+}{
+    "event": "testStart",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testAddAndDeleteBookmark"
+}{
+    "event": "test",
+    "suite": "IssuuBookmarkTest",
+    "test": "IssuuBookmarkTest::testAddAndDeleteBookmark",
+    "status": "fail",
+    "time": 0.5351779460907,
+    "trace": [
+        {
+            "file": "C:\\xampp\\htdocs\\IssuuService-lib\\tests\\lib\\class.issuubookmarktest.php",
+            "line": 157,
+            "function": "assertTrue",
+            "class": "PHPUnit_Framework_Assert",
+            "type": "::"
+        }
+    ],
+    "message": "Failed asserting that false is true.",
     "output": ""
 }
