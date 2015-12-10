@@ -154,7 +154,9 @@ class IssuuBookmarkTest extends PHPUnit_Framework_TestCase
 		$response = self::$instance->add(self::$params);
 		$this->assertTrue($response['stat'] == 'ok');
 
-		// Action issuu.bookmark.delete not works
+		/**
+		*	Action issuu.bookmark.delete not works
+		*/
 		// $response = self::$instance->delete(array('bookmarkIds' => $response['bookmark']->bookmarkId));
 		// $this->assertTrue($response['stat'] == 'ok');
 	}
