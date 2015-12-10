@@ -4,6 +4,7 @@
 		<testsuite name="issuu-service-api">
 			<file>tests/lib/class.issuudocumenttest.php</file>
 			<file>tests/lib/class.issuubookmarktest.php</file>
+			<file>tests/lib/class.issuufoldertest.php</file>
 		</testsuite>
 	</testsuites>
 	<logging>
