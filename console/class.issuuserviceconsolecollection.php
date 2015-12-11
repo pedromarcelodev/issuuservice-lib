@@ -60,4 +60,25 @@ class IssuuServiceConsoleCollection
 		
 		return $this->collection[$this->count - 1];
 	}
+
+	public function toArray()
+	{
+		$arr = array();
+
+		foreach ($this->collection as $value) {
+			if (is_object($value))
+			{
+				if (method_exists($value, 'toArray'))
+				{
+					$value = $value->toArray();
+				}
+				else if (method_exists($value, 'getArrayCopy'))
+				{
+					$value = $value->getArrayCopy();
+				}
+			}
+			$arr[] = $value;
+		}
+		return $arr;
+	}
 }

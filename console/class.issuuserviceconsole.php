@@ -72,6 +72,13 @@ class IssuuServiceConsole
 
 	public static function run($argc, $argv)
 	{
+		$fileLog = ISSUU_SERVICE_LIBRARY_DIR . '/console/log.txt';
+
+		if (!is_file($fileLog))
+		{
+			file_put_contents($fileLog, '');
+			chmod($fileLog, 0755);
+		}
 		$instance = new IssuuServiceConsole($argc, $argv);
 		$instance->setDefaultValues();
 		$listener = new IssuuServiceConsoleListener();
@@ -95,7 +102,10 @@ class IssuuServiceConsole
 			echo sprintf("\nException Message: %s\n\n", $last->getMessage());
 			die($trace . "\n");
 		}
-
+		$str = print_r($last, true);
+		$datetime = date('Y-m-d H:i:s');
+		file_put_contents($fileLog, "[$datetime]: $str", FILE_APPEND);
+		echo "\n$str\n";
 		exit;
 	}
 
