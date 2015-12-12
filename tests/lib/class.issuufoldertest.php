@@ -14,11 +14,17 @@ class IssuuFolderTest extends PHPUnit_Framework_TestCase
 
 	public static function setUpBeforeClass()
 	{
-		self::$instance = new IssuuFolder('jil7ll5cg2cwm93kg6xlsc1x9apdeyh7', '8agoiu10igdyw7azj9b8rvi0otyja6gj');
-		$params = array_merge(array('apiKey' => 'jil7ll5cg2cwm93kg6xlsc1x9apdeyh7'), self::$params);
+		sleep(3);
+		self::$instance = new IssuuFolder($_POST['apikey'], $_POST['apisecret']);
+		$params = array_merge(array('apiKey' => $_POST['apikey']), self::$params);
 		ksort($params);
 		$params = strtr(urldecode(http_build_query($params)), array('&' => '', '=' => ''));
-		self::$signature = md5('8agoiu10igdyw7azj9b8rvi0otyja6gj' . $params);
+		self::$signature = md5($_POST['apisecret'] . $params);
+	}
+
+	public static function setUpAfterClass()
+	{
+		self::$instance = null;
 	}
 
 	public function testHasClass()
@@ -152,6 +158,18 @@ class IssuuFolderTest extends PHPUnit_Framework_TestCase
 
 	public function testAddUpdateAndDeleteFolder()
 	{
-		
+		$response = self::$instance->add(array(
+			'folderName' => 'Unit test',
+			'folderDescription' => 'Pedro Marcelo de Sá Alves'
+		));
+		$this->assertEquals('ok', $response['stat']);
+		$folderId = $response['folder']->folderId;
+		$response = self::$instance->update(array(
+			'folderId' => $folderId,
+			'folderName' => 'Unit test updated'
+		));
+		$this->assertEquals('ok', $response['stat']);
+		$response = self::$instance->delete(array('folderIds' => $folderId));
+		$this->assertEquals('ok', $response['stat']);
 	}
 }

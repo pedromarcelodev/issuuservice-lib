@@ -5,6 +5,7 @@
 			<file>tests/lib/class.issuudocumenttest.php</file>
 			<file>tests/lib/class.issuubookmarktest.php</file>
 			<file>tests/lib/class.issuufoldertest.php</file>
+			<file>tests/lib/class.issuudocumentembedtest.php</file>
 		</testsuite>
 	</testsuites>
 	<logging>
@@ -17,5 +18,7 @@
 	<php>
 		<post name="doc-test" value="http://www.mreis.info/FIJ/NEANDERWIN.pdf"/>
 		<post name="existing-document" value="curriculo-pedro-marcelo-v2"/>
+		<post name="apikey" value="jil7ll5cg2cwm93kg6xlsc1x9apdeyh7"/>
+		<post name="apisecret" value="8agoiu10igdyw7azj9b8rvi0otyja6gj"/>
 	</php>
 </phpunit>
