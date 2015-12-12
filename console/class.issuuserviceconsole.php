@@ -104,7 +104,7 @@ class IssuuServiceConsole
 		}
 		$str = print_r($last, true);
 		$datetime = date('Y-m-d H:i:s');
-		file_put_contents($fileLog, "[$datetime]: $str", FILE_APPEND);
+		file_put_contents($fileLog, "[$datetime]: $str\n", FILE_APPEND);
 		echo "\n$str\n";
 		exit;
 	}
