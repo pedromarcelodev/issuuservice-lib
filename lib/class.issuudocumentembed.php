@@ -89,7 +89,7 @@ class IssuuDocumentEmbed extends IssuuServiceAPI
         $params['action'] = 'issuu.document_embed.get_html_code';
         $this->setParams($params);
 
-        return file_get_contents($this->buildUrl());
+        return $this->curlRequest($this->getApiUrl(), $this->getParams());
     }
 
     /**
