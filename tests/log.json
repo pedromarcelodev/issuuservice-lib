@@ -15,7 +15,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testHasClass",
     "status": "pass",
-    "time": 0.00062108039855957,
+    "time": 0.001446008682251,
     "trace": [],
     "message": "",
     "output": ""
@@ -28,7 +28,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testSetParamsAndThrowException",
     "status": "pass",
-    "time": 0.00038003921508789,
+    "time": 0.0009150505065918,
     "trace": [],
     "message": "",
     "output": ""
@@ -41,7 +41,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testCalculateSignature",
     "status": "pass",
-    "time": 0.00032496452331543,
+    "time": 0.00082921981811523,
     "trace": [],
     "message": "",
     "output": ""
@@ -54,7 +54,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testParseJsonObjectValues",
     "status": "pass",
-    "time": 0.00032901763916016,
+    "time": 0.00084590911865234,
     "trace": [],
     "message": "",
     "output": ""
@@ -67,7 +67,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testParseXmlObjectValues",
     "status": "pass",
-    "time": 0.00032496452331543,
+    "time": 0.00084090232849121,
     "trace": [],
     "message": "",
     "output": ""
@@ -80,7 +80,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testIssuuListDocuments",
     "status": "pass",
-    "time": 0.29964590072632,
+    "time": 0.29819893836975,
     "trace": [],
     "message": "",
     "output": ""
@@ -93,7 +93,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testErrorCodes",
     "status": "pass",
-    "time": 0.78127312660217,
+    "time": 0.78275990486145,
     "trace": [],
     "message": "",
     "output": ""
@@ -106,7 +106,7 @@
     "suite": "IssuuDocumentTest",
     "test": "IssuuDocumentTest::testUrlUploadUpdateAndDeleteDocument",
     "status": "pass",
-    "time": 21.377249002457,
+    "time": 21.555350065231,
     "trace": [],
     "message": "",
     "output": ""
@@ -123,7 +123,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testHasClass",
     "status": "pass",
-    "time": 0.00094008445739746,
+    "time": 0.00096416473388672,
     "trace": [],
     "message": "",
     "output": ""
@@ -136,7 +136,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testSetParamsAndThrowException",
     "status": "pass",
-    "time": 0.00088000297546387,
+    "time": 0.00097393989562988,
     "trace": [],
     "message": "",
     "output": ""
@@ -149,7 +149,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testCalculateSignature",
     "status": "pass",
-    "time": 0.00085592269897461,
+    "time": 0.00088191032409668,
     "trace": [],
     "message": "",
     "output": ""
@@ -162,7 +162,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testParseJsonObjectValues",
     "status": "pass",
-    "time": 0.00085783004760742,
+    "time": 0.00090193748474121,
     "trace": [],
     "message": "",
     "output": ""
@@ -175,7 +175,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testParseXmlObjectValues",
     "status": "pass",
-    "time": 0.0008549690246582,
+    "time": 0.00088214874267578,
     "trace": [],
     "message": "",
     "output": ""
@@ -188,7 +188,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testIssuuListBookmarks",
     "status": "pass",
-    "time": 0.27555894851685,
+    "time": 0.28411197662354,
     "trace": [],
     "message": "",
     "output": ""
@@ -201,7 +201,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testErrorCodes",
     "status": "pass",
-    "time": 1.0412240028381,
+    "time": 1.0501551628113,
     "trace": [],
     "message": "",
     "output": ""
@@ -214,7 +214,7 @@
     "suite": "IssuuBookmarkTest",
     "test": "IssuuBookmarkTest::testAddAndDeleteBookmark",
     "status": "pass",
-    "time": 0.28894400596619,
+    "time": 0.30210590362549,
     "trace": [],
     "message": "",
     "output": ""
@@ -231,7 +231,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testHasClass",
     "status": "pass",
-    "time": 0.00092411041259766,
+    "time": 0.0010612010955811,
     "trace": [],
     "message": "",
     "output": ""
@@ -244,7 +244,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testSetParamsAndThrowException",
     "status": "pass",
-    "time": 0.00088095664978027,
+    "time": 0.0009300708770752,
     "trace": [],
     "message": "",
     "output": ""
@@ -257,7 +257,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testCalculateSignature",
     "status": "pass",
-    "time": 0.00080108642578125,
+    "time": 0.0008389949798584,
     "trace": [],
     "message": "",
     "output": ""
@@ -270,7 +270,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testParseJsonObjectValues",
     "status": "pass",
-    "time": 0.00083398818969727,
+    "time": 0.0008549690246582,
     "trace": [],
     "message": "",
     "output": ""
@@ -283,7 +283,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testParseXmlObjectValues",
     "status": "pass",
-    "time": 0.00082492828369141,
+    "time": 0.00085186958312988,
     "trace": [],
     "message": "",
     "output": ""
@@ -296,7 +296,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testIssuuListFolders",
     "status": "pass",
-    "time": 0.26925015449524,
+    "time": 0.27972602844238,
     "trace": [],
     "message": "",
     "output": ""
@@ -309,7 +309,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testErrorCodes",
     "status": "pass",
-    "time": 0.77021813392639,
+    "time": 0.77108407020569,
     "trace": [],
     "message": "",
     "output": ""
@@ -322,7 +322,7 @@
     "suite": "IssuuFolderTest",
     "test": "IssuuFolderTest::testAddUpdateAndDeleteFolder",
     "status": "pass",
-    "time": 0.8673529624939,
+    "time": 1.0005021095276,
     "trace": [],
     "message": "",
     "output": ""
@@ -339,7 +339,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testHasClass",
     "status": "pass",
-    "time": 0.00091910362243652,
+    "time": 0.0010571479797363,
     "trace": [],
     "message": "",
     "output": ""
@@ -352,7 +352,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testSetParamsAndThrowException",
     "status": "pass",
-    "time": 0.00086498260498047,
+    "time": 0.00092101097106934,
     "trace": [],
     "message": "",
     "output": ""
@@ -365,7 +365,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testCalculateSignature",
     "status": "pass",
-    "time": 0.00078105926513672,
+    "time": 0.00083494186401367,
     "trace": [],
     "message": "",
     "output": ""
@@ -378,7 +378,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testParseJsonObjectValues",
     "status": "pass",
-    "time": 0.00080609321594238,
+    "time": 0.00085306167602539,
     "trace": [],
     "message": "",
     "output": ""
@@ -391,7 +391,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testParseXmlObjectValues",
     "status": "pass",
-    "time": 0.0010287761688232,
+    "time": 0.00084900856018066,
     "trace": [],
     "message": "",
     "output": ""
@@ -404,7 +404,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testIssuuListFolders",
     "status": "pass",
-    "time": 0.28037118911743,
+    "time": 0.27574300765991,
     "trace": [],
     "message": "",
     "output": ""
@@ -417,7 +417,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testErrorCodes",
     "status": "pass",
-    "time": 3.8303079605103,
+    "time": 3.7992329597473,
     "trace": [],
     "message": "",
     "output": ""
@@ -430,7 +430,7 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testGetHtmlCode",
     "status": "pass",
-    "time": 2.5407929420471,
+    "time": 2.5403649806976,
     "trace": [],
     "message": "",
     "output": ""
@@ -443,8 +443,8 @@
     "suite": "IssuuDocumentEmbedTest",
     "test": "IssuuDocumentEmbedTest::testAddUpdateAndDeleteDocumentEmbed",
     "status": "pass",
-    "time": 3.1148920059204,
+    "time": 3.1292691230774,
     "trace": [],
     "message": "",
-    "output": "array(2) {\n  [\"stat\"]=>\n  string(2) \"ok\"\n  [\"documentEmbed\"]=>\n  object(stdClass)#23 (7) {\n    [\"id\"]=>\n    int(31937368)\n    [\"dataConfigId\"]=>\n    string(17) \"13697776\/31937368\"\n    [\"documentId\"]=>\n    string(45) \"150909220128-e98a2d90e33c403c80250d17063a865a\"\n    [\"readerStartPage\"]=>\n    int(1)\n    [\"width\"]=>\n    int(500)\n    [\"height\"]=>\n    int(300)\n    [\"created\"]=>\n    string(24) \"2015-12-12T21:35:32.000Z\"\n  }\n}\n"
+    "output": ""
 }
