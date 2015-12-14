@@ -68,9 +68,8 @@ class IssuuDocument extends IssuuServiceAPI
         }
 
         $this->setParams($params);
-        $file = $_FILES['file']['tmp_name'];
-        $this->params['file'] = '@' . $file;
-        $response = $this->curlcurlRequest(
+        $this->setFile($_FILES['file']);
+        $response = $this->curlRequest(
             $this->getUploadUrl(),
             $this->params,
             array(),
@@ -286,4 +285,21 @@ class IssuuDocument extends IssuuServiceAPI
 
         return $doc;
     }
+
+    private function setFile($file)
+    {
+        if (version_compare(PHP_VERSION, '5.5', '>='))
+        {
+            $this->params['file'] = new CURLFile(
+                $file['tmp_name'],
+                $file['type'],
+                $file['name']
+            );
+        }
+        else
+        {
+            $this->params['file'] = '@' . $file['tmp_name'];
+        }
+    }
+ 
 }

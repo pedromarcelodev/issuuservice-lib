@@ -241,18 +241,29 @@ abstract class IssuuServiceAPI
     *   @param array $headers Cabeçalhos adicionais da requisição
     *   @return mixed Reposta da requisição
     */
-    public function curlRequest($url, $data, array $headers = array(), $decodeData = true)
-    {
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_POST, 1);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
+    public function curlRequest(
+        $url,
+        array $data,
+        array $headers = array(),
+        $decodeData = true,
+        array $additionalOptions = array()
+    ) {
         if ($decodeData == true)
             $data = urldecode(http_build_query($data));
+
+        $options = array(
+            CURLOPT_URL => $url,
+            CURLOPT_POST => true,
+            CURLOPT_POSTFIELDS => $data,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_HTTPHEADER => $headers,
+        );
         
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        foreach ($additionalOptions as $key => $value) {
+            $options[$key] = $value;
+        }
+        $curl = curl_init();
+        curl_setopt_array($curl, $options);
         $response = curl_exec($curl);
         curl_close($curl);
         return $response;
