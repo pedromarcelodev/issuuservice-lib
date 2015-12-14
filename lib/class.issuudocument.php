@@ -10,7 +10,7 @@ if (!class_exists('IssuuServiceAPI'))
 *
 *   @author Pedro Marcelo de Sá Alves
 *   @link https://github.com/pedromarcelojava/
-*   @version 1.0
+*   @version 1.2
 */
 class IssuuDocument extends IssuuServiceAPI
 {
@@ -75,13 +75,6 @@ class IssuuDocument extends IssuuServiceAPI
             array(),
             false
         );
-
-        // $curl = curl_init('http://upload.issuu.com/1_0');
-        // curl_setopt($curl, CURLOPT_POSTFIELDS, $this->params);
-        // curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
-        // $response = curl_exec($curl);
-        // curl_close($curl);
 
         $slug = $this->slug_section;
 

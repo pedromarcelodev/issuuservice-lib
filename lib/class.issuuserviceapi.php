@@ -5,7 +5,7 @@
 *
 *   @author Pedro Marcelo de Sá Alves
 *   @link https://github.com/pedromarcelojava/
-*   @version 1.0.3
+*   @version 1.2
 */
 abstract class IssuuServiceAPI
 {

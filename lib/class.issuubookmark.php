@@ -10,7 +10,7 @@ if (!class_exists('IssuuServiceAPI'))
 *
 *   @author Pedro Marcelo de Sá Alves
 *   @link https://github.com/pedromarcelojava/
-*   @version 1.0
+*   @version 1.2
 */
 class IssuuBookmark extends IssuuServiceAPI
 {
