@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="test.php" colors="true">
+<phpunit bootstrap="test.php" backupGlobals="false" colors="true">
 	<testsuites>
 		<testsuite name="issuu-service-api">
 			<file>tests/lib/class.issuudocumenttest.php</file>
 			<file>tests/lib/class.issuubookmarktest.php</file>
 			<file>tests/lib/class.issuufoldertest.php</file>
 			<file>tests/lib/class.issuudocumentembedtest.php</file>
+		</testsuite>
+		<testsuite name="issuu-service-api-selenium">
+			<file>tests/lib/class.issuudocumentuploadtest.php</file>
 		</testsuite>
 	</testsuites>
 	<logging>
@@ -20,5 +23,12 @@
 		<post name="existing-document" value="curriculo-pedro-marcelo-v2"/>
 		<post name="apikey" value="jil7ll5cg2cwm93kg6xlsc1x9apdeyh7"/>
 		<post name="apisecret" value="8agoiu10igdyw7azj9b8rvi0otyja6gj"/>
+		<const name="PHPUNIT_TESTSUITE" value="true"/>
+		<const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_HOST" value="127.0.0.1"/>
+		<const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PORT" value="4444"/>
+		<const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_BROWSER" value="*firefox"/>
+		<const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM2_BROWSER" value="firefox"/>
+		<const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_TESTS_URL" value="http://127.0.0.1:8080/"/>
+		<!-- <const name="PHPUNIT_TESTSUITE_EXTENSION_SELENIUM_PATH" value="/tmp"/> -->
 	</php>
 </phpunit>
